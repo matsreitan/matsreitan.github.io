@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<link rel="icon" 
+      type="image/png" 
+      href="http://media-s3-us-east-1.ceros.com/gumgum/images/2015/11/05/2899eea89308998bb653b66e25d286e3/trump.png">
+
+    <title>KommentarSide</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+   
+			
+		#kommentarside {font-family:;
+			
+		background-color: blue;
+		color:white;
+	    border-style:solid;
+		border-color: red;
+		border-bottom-width: thick;
+		text-align: center; 
+		margin-left: 113px ;
+		margin-right: 113px ;
+		}
+		
+
+		.navn {background-color: white}
+	
+		.kommentarfelt {background-color: white}
+	
+		#navn {
+	    border-style:solid;
+		border-color: red;
+		border-bottom-width: thick;
+		}
+		
+		#melding {
+	    border-style:solid;
+		border-color: red;
+		border-bottom-width: thick;
+		}
+		
+		#gjestebok {
+	    background-color: white; 
+	    border-style: solid;
+		border-color: red ;
+		margin-left: 300px ;
+		margin-right: 300px ;
+		
+		}
+		
+		#navndiv {
+	    border-style:solid;
+		border-bottom-width: thick;
+	    border-color: blue ; 
+		margin-left: 500px ;
+		margin-right: 500px ;
+		background-color: white
+		}
+		
+		#kommentardiv {
+	    border-style:solid;
+		border-bottom-width: thick;
+	    border-color: blue ; 
+		margin-left: 500px ;
+		margin-right: 500px ;
+		background-color: white
+		}
+		
+	
+	</style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body background="http://previews.123rf.com/images/captainvector/captainvector1509/captainvector150902465/45399459-Vertical-stripes-with-stars-background-Stock-Vector.jpg">
+	
+	
+			<h1 id="kommentarside"><strong>TRUMP GJESTEBOK </strong></h1>
+
+	
+	
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">TRUMP</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="Gjestebok.html">Gjestebok</a>
+                    </li>
+                    <li>
+                       
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+				<div id="navndiv">Navn:</div> <input type="text" id="navn">
+				<br><br>
+				<div id="kommentardiv">Kommentar:</div><input type="text" id="melding">
+				<br>
+				<input type="submit" id="submit" value="SEND">
+				
+				<div id="gjestebok"></div>
+			</div>
+        </div>
+		
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	
+	
+	<script>
+    var navn, melding;
+        
+        function kommentar() {
+            navn = document.getElementById("navn").value;
+            melding = document.getElementById("melding").value;
+                        
+            document.getElementById("gjestebok").innerHTML =
+            document.getElementById("gjestebok").innerHTML + melding +
+            "<div style = \"color:grey\"> (" + navn + ") </div><br>";
+                    
+        }
+        document.getElementById("submit").addEventListener("click", kommentar);
+    </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+</body>
+
+</html>
